@@ -4,3 +4,6 @@ Git
 HTML
 CSS
 React
+Python
+JavaScript
+
