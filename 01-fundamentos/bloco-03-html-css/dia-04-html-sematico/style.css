@@ -1,0 +1,39 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main{
+    border: 3px solid red;
+    
+}
+article{
+    width: 70%;
+    height: 100%;
+}
+
+
+section{
+    border: 3px solid green;
+}
+.general{
+    display:inline-block;
+    width: 50%;
+}
+
+.trivia{
+    width: 30%;
+    display: inline-block;
+    margin: auto;
+    vertical-align: middle;
+}
+article{
+    border: 3px solid blue;
+}
+aside{
+    border: 3px solid orange;
+    max-width: 30%;
+    vertical-align: top;
+}
+.trivia img {
+    width: 100%;
+}
