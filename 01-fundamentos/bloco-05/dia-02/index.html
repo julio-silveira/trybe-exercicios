@@ -70,6 +70,18 @@
       body.appendChild(createAdd("main","main-content"));
       body.children[2].appendChild(createAdd("section","center-content"));
       body.children[2].children[0].appendChild(createAdd("p","text")).innerText = "Este é um parágrafo";
+      body.children[2].appendChild(createAdd("section","left-content"));
+      body.children[2].appendChild(createAdd("section","right-content"));
+      body.children[2].children[1].appendChild(createAdd("img","small-image"));
+      body.children[2].children[1].children[0].setAttribute( 'src','https://picsum.photos/200');
+      let list = document.createElement('ul');
+      body.children[2].children[2].appendChild(list);
+      let numeros = ["um","dois","três","quatro","cinco","seis","sete","oito","nove","dez"];
+
+      for(i in numeros){
+        body.children[2].children[2].children[0].appendChild(document.createElement("li")).innerText = numeros[i];
+      }
+
 
     </script>
   </body>
