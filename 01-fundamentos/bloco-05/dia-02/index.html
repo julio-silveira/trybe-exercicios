@@ -57,14 +57,20 @@
   </head>
   <body>
     <script>
+      function createAdd(elemento , classe){
+        let element = document.createElement(elemento);
+        element.classList.add(classe);
+        return element
+      }
       let body = document.getElementsByTagName("body")[0]
-      let title = document.createElement('h1');
-      title.innerText = "Exercício 5.2 - JavaScript DOM";
-      body.appendChild(title);
+      body.appendChild(createAdd("h1","title")).innerText = "Exercício 5.2 - JavaScript DOM ";
 
-      let mainContent = document.createElement('main');
-      mainContent.classList.add("main-content");
-      body.appendChild(mainContent);
+      body.append(createAdd("main","main-content"));
+      //let mainContent = document.createElement('main');
+      //mainContent.classList.add("main-content");
+      //body.appendChild(mainContent);
+
+      
 
     </script>
   </body>
