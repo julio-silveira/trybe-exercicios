@@ -85,7 +85,18 @@
       body.children[2].appendChild(createAdd("h3","description")).innerText = "Descrição 02";
       body.children[2].appendChild(createAdd("h3","description")).innerText = "Descrição 03";
       
+      let main = document.getElementsByTagName("main")[0];
+      let lista = document.getElementsByTagName("ul")[0];
 
+      main.removeChild(main.firstChild.nextSibling);
+
+      main.children[1].style.marginRight = "Auto";
+      main.style.backgroundColor = "Green";
+      lista.removeChild(lista.lastChild)
+      lista.removeChild(lista.lastChild)
+      
+
+    
 
     </script>
   </body>
