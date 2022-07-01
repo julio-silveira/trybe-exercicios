@@ -14,7 +14,6 @@ function createDaysOfTheWeek() {
     const days = weekDays[index];
     const dayListItem = document.createElement("li");
     dayListItem.innerHTML = days;
-
     weekDaysList.appendChild(dayListItem);
   }
 }
@@ -22,3 +21,27 @@ function createDaysOfTheWeek() {
 createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
+//Exercício 01
+const dayList = document.querySelector("#days");
+let holiday = [24, 25, 31];
+let friday = [4, 11, 18, 25];
+let decemberDaysList = [
+  29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+  21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
+];
+
+for (item in decemberDaysList) {
+  let actualDay = document.createElement("li");
+  actualDay.classList.add("day");
+  for (day in holiday) {
+    if (decemberDaysList[item] === holiday[day]) {
+      actualDay.classList.add("holiday");
+    }
+  }
+  for (day in friday) {
+    if (decemberDaysList[item] === friday[day]) {
+      actualDay.classList.add("friday");
+    }
+  }
+  dayList.appendChild(actualDay).innerText = decemberDaysList[item];
+}
