@@ -17,6 +17,7 @@ function createDaysOfTheWeek() {
     weekDaysList.appendChild(dayListItem);
   }
 }
+const weekDaysList = document.querySelector(".week-days");
 
 createDaysOfTheWeek();
 
@@ -29,7 +30,6 @@ let decemberDaysList = [
   29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
   21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
 ];
-
 for (item in decemberDaysList) {
   let actualDay = document.createElement("li");
   actualDay.classList.add("day");
@@ -45,3 +45,20 @@ for (item in decemberDaysList) {
   }
   dayList.appendChild(actualDay).innerText = decemberDaysList[item];
 }
+
+//Exercicio 02
+let buttons = document.querySelector(".buttons-container");
+function createHoliday(feriado) {
+  let addHoliday = document.createElement("button");
+  addHoliday.setAttribute("id", "btn-holiday");
+  buttons.appendChild(addHoliday).innerText = feriado;
+}
+createHoliday("Feriados");
+
+function changeColor() {
+  let holidays = document.getElementsByClassName("holiday");
+  for (day in holidays) {
+    holidays[day].style.backgroundColor = "red";
+  }
+}
+document.getElementById("btn-holiday").addEventListener("click", changeColor);
