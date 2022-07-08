@@ -1,0 +1,91 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #FBCB0A;
+    color: white;
+}
+
+header, footer{
+    width: 100%;
+    background-color: #590696;
+    align-items: center;
+    padding-bottom: 0.1rem;
+}
+
+header p{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:  space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
+}
+footer p{
+    text-align: center;
+}
+header a:hover{
+    background-color: #FBCB0A;
+    color: black;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+h2{
+}
+
+main{
+    display: flex;
+    width: 100%;
+    color: black;
+}
+
+article{
+    width: 70%;
+}
+
+#foto{
+ margin-top: auto;
+ margin-bottom: auto;
+ vertical-align: middle;
+}
+
+aside{
+    width: 30%;
+    padding: 0% 2%;
+    background-color: ;
+}
+.container{
+    display: block;
+}
+.row{
+    display: flex;
+}
+.trivia{
+     
+    width: 35%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: #590696 solid 3px;
+    
+}
+.general{
+    display: flex;
+    flex-wrap: wrap;
+}
+.general p{
+    text-align: justify;
+    width: 50%;
+    padding: 0 2em;
+    
+}
+
+img{
+    max-width: 250px;
+}
+
+.text-center{
+    text-align: center;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+
+      function createAdd(elemento , classe){
+        let element = document.createElement(elemento);
+        element.List.add(classe);
+        return element
+      }
+
+      let body = document.getElementsByTagName("body")[0]
+
+      body.appendChild(createAdd("h1","title")).innerText = "Exercício 5.2 - JavaScript DOM ";
+      body.appendChild(createAdd("main","main-content"));
+      body.children[2].appendChild(createAdd("section","center-content"));
+      body.children[2].children[0].appendChild(createAdd("p","text")).innerText = "Este é um parágrafo";
+      body.children[2].appendChild(createAdd("section","left-content"));
+      body.children[2].appendChild(createAdd("section","right-content"));
+      body.children[2].children[1].appendChild(createAdd("img","small-image"));
+      body.children[2].children[1].children[0].setAttribute( 'src','https://picsum.photos/200');
+      let list = document.createElement('ul');
+      body.children[2].children[2].appendChild(list);
+      let numeros = ["um","dois","três","quatro","cinco","seis","sete","oito","nove","dez"];
+
+      for(i in numeros){
+        body.children[2].children[2].children[0].appendChild(document.createElement("li")).innerText = numeros[i];
+      }
+      body.children[2].appendChild(createAdd("h3","description")).innerText = "Descrição 01";
+      body.children[2].appendChild(createAdd("h3","description")).innerText = "Descrição 02";
+      body.children[2].appendChild(createAdd("h3","description")).innerText = "Descrição 03";
+      
+      let main = document.getElementsByTagName("main")[0];
+      let lista = document.getElementsByTagName("ul")[0];
+
+      main.removeChild(main.firstChild.nextSibling);
+
+      main.children[1].style.marginRight = "Auto";
+      main.style.backgroundColor = "Green";
+      lista.removeChild(lista.lastChild)
+      lista.removeChild(lista.lastChild)
+      
+
+    
+
+    </script>
+  </body>
+</html>
